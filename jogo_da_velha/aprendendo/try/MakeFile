@@ -1,0 +1,19 @@
+all: printy
+ 
+printy: domain.o do.o
+    g++ -o printy domain.o do.o
+ 
+main.o: main.cpp do.h
+    g++ -o domain.o domain.cpp -c -W -Wall -ansi -pedantic
+ 
+helloWorld.o: do.cpp do.h
+    g++ -o do.o do.cpp -c -W -Wall -ansi -pedantic
+ 
+clean:
+    rm -rf *.o *~ printy
+
+
+	g++ -c -o main.o main.cpp
+	g++ -c -o cadastro.o cadastro.cpp
+	g++ -o main main.o cadastro.o
+
