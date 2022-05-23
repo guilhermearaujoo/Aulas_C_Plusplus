@@ -3,7 +3,7 @@ all: printy
 printy: domain.o do.o
     g++ -o printy domain.o do.o
  
-main.o: main.cpp do.h
+main.o: domain.cpp do.h
     g++ -o domain.o domain.cpp -c -W -Wall -ansi -pedantic
  
 helloWorld.o: do.cpp do.h
